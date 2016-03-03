@@ -2,9 +2,9 @@ package com.calculator.util;
 
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
-import java.util.stream.IntStream;
 
 /**
+ * This class uses Fork/Join to go through all elements in the given array of primes and select the highest value
  * Created by Franklin on 02/03/2016.
  */
 public class ForkJoinHighestPrimeWithinRangeCalculator extends RecursiveTask<Integer> {

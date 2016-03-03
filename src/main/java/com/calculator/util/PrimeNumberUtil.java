@@ -26,6 +26,11 @@ public class PrimeNumberUtil {
     }
 
 
+    /**
+     * This method returns an int array of all prime numbers from 1 to range using a parallel stream
+     * @param range
+     * @return
+     */
     public static int[] primesWithinRangeUsingParallelStream(int range){
         if(range <= 1)
             return new int[]{};
@@ -33,6 +38,11 @@ public class PrimeNumberUtil {
         return IntStream.rangeClosed(1, range).parallel().filter(PrimeNumberUtil::isPrime).toArray();
     }
 
+    /**
+     * This method returns an int array of all prime numbers from 1 to range using an IntStream
+     * @param range
+     * @return
+     */
     public static int[] primesWithinRange(int range){
         if(range <= 1)
             return new int[]{};
@@ -41,7 +51,7 @@ public class PrimeNumberUtil {
     }
 
     /**
-     * this method is overkill but was implemented to use Fork/Join as a current implementaion for this task. the method
+     * this method is overkill but was implemented to use Fork/Join as a concurrent implementaion for this task. the method
      * highestPrimeWithinRangeBestSolution is a better and more efficient approach
      * @param range
      * @return
@@ -55,6 +65,11 @@ public class PrimeNumberUtil {
 
     }
 
+    /**
+     *
+     * @param range
+     * @return
+     */
     public static int highestPrimeWithinRangeBestSolution(int range){
         if(range <= 1)
             return 0;
